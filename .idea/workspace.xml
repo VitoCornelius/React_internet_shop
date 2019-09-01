@@ -2,20 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="806f541c-3816-466a-bd95-304e624fbba7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/custom-button/custom-buton.styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/custom-button/cutom-button.component.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fomr-input/form-input.component.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/fomr-input/form-input.styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.styles.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/firebase/firabase.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/sign-in-and-sign-up/sign-in-and-sign-up.styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sign-up/sign-up.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/sign-up/sign-up.styles.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-button/custom-buton.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-button/custom-buton.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-button/cutom-button.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-button/cutom-button.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header/header.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sign-in/sign-in.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sign-in/sign-in.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/firebase/firabase.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/firebase/firabase.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sign-in-and-sign-up/sign-in-and-sign-up.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sign-in-and-sign-up/sign-in-and-sign-up.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sign-in-and-sign-up/sign-in-and-sign-up.styles.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,7 +111,12 @@
       <workItem from="1566759446241" duration="793000" />
       <workItem from="1566837993577" duration="3118000" />
       <workItem from="1566847706979" duration="1632000" />
-      <workItem from="1567017561634" duration="259000" />
+      <workItem from="1567017561634" duration="4352000" />
+      <workItem from="1567099944970" duration="1294000" />
+      <workItem from="1567106939327" duration="893000" />
+      <workItem from="1567190565524" duration="4449000" />
+      <workItem from="1567257021608" duration="877000" />
+      <workItem from="1567352176253" duration="605000" />
     </task>
     <servers />
   </component>

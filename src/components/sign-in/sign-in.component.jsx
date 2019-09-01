@@ -3,7 +3,7 @@ import React from 'react';
 import FormInput from "../fomr-input/form-input.component";
 import CustomButton from "../custom-button/cutom-button.component";
 import './sign-in.styles.scss';
-import {signInWithGoogle} from "../../firebase/firabase.config";
+import {auth , signInWithGoogle} from "../../firebase/firabase.config";
 
 class SignIn extends React.Component {
     constructor(props) {
@@ -14,9 +14,16 @@ class SignIn extends React.Component {
         }
     }
 
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault();
-        this.setState({email : '', password : ''})
+        const {email ,  password} = this.state;
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+            this.setState({email : '', password : ''})
+        } catch (error){
+            console.error(error);
+        }
+
     };
 
     handleChange = event => {
@@ -45,8 +52,12 @@ class SignIn extends React.Component {
                                handleChange={this.handleChange}
                                required
                     />
-                    <CustomButton type="submit" >Sign In</CustomButton>
-                    <CustomButton  onClick={signInWithGoogle} >Sign In With Google</CustomButton>
+                    <div className='buttons'>
+                        <CustomButton type="submit" >Sign In</CustomButton>
+                        <CustomButton  onClick={signInWithGoogle} isGoogleSignIn >{/*default value of true*/}
+                            Sign In With Google
+                        </CustomButton>
+                    </div>
                 </form>
             </div>
         )
