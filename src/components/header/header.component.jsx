@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {connect} from 'react-redux';
 import {ReactComponent as Logo} from '../../assets/crown.svg'; // a special syntax for SVG graphics
 import {auth} from '../../firebase/firabase.config';
 
@@ -27,4 +28,10 @@ const Header = ({currentUser}) => (
     </div>
 );
 
-export default Header;
+const mapStateToProps = (state) => (
+    {
+        currentUser: state.user.userFromReducer //tutaj jest powolywany do zycie ten router
+    }
+);
+
+export default connect(mapStateToProps)(Header);

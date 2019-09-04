@@ -4,7 +4,7 @@ import SHOP_DATA from "./shop.data";
 import PreviewCollection from "../../components/preview-collection/preview-collection.component";
 
 class ShopPage extends React.Component {
-    constructor(props){
+    constructor(){
         super();
         this.state = {
             collections: SHOP_DATA
@@ -13,7 +13,7 @@ class ShopPage extends React.Component {
 
     render(){
         const {collections} = this.state; //destructuring
-        return (<div className={'shop-page'}>
+        return (<div className='shop-page'>
             {
                 collections.map( ({id, ...otherCollectionProps }) => (
                     <PreviewCollection key={id} {...otherCollectionProps} />
