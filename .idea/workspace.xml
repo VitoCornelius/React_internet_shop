@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="806f541c-3816-466a-bd95-304e624fbba7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/redux/root-reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/user/user.actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/user/user.reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/user/user.types.js" afterDir="false" />
+    <list default="true" id="806f541c-3816-466a-bd95-304e624fbba7" name="Default Changelist" comment="Add cart functionalities">
+      <change afterPath="$PROJECT_DIR$/src/assets/cart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cart-dropdown/cart-dropdown.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cart-dropdown/cart-dropdown.styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cart-icon/cart-icon.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cart-icon/cart-icon.styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cart-item/cart-item.component.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/cart-item/cart-item.styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/cart/cart.action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/cart/cart.reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/cart/cart.types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/cart/cart.utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-item/collection-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-item/collection-item.component.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/collection-item/collection-item.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/collection-item/collection-item.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-button/custom-buton.styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-button/custom-buton.styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/custom-button/cutom-button.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/custom-button/cutom-button.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header/header.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header/header.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu-item/menu-item.component.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/preview-collection/preview-collection.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/preview-collection/preview-collection.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/shop/shop.component.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/shop/shop.component.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/shop/shop.data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/shop/shop.data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/root-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/root-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +127,13 @@
       <workItem from="1567352176253" duration="1295000" />
       <workItem from="1567442440154" duration="3469000" />
       <workItem from="1567451105512" duration="2414000" />
-      <workItem from="1567622442916" duration="2533000" />
+      <workItem from="1567622442916" duration="2603000" />
+      <workItem from="1567707871137" duration="1504000" />
+      <workItem from="1567709440291" duration="53000" />
+      <workItem from="1567796510594" duration="1862000" />
+      <workItem from="1567876644428" duration="2134000" />
+      <workItem from="1567927003222" duration="4413000" />
+      <workItem from="1567958363595" duration="2935000" />
     </task>
     <servers />
   </component>
@@ -139,5 +152,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add cart functionalities" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add cart functionalities" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/header/header.component.jsx</url>
+          <line>20</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

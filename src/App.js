@@ -64,7 +64,7 @@ class App extends React.Component {
 
 const mapStateToProps = ({user}) => ({ //destrucuturuize the state
     currentUser: user.userFromReducer //access to this.props.currentuser
-})
+});
 
 const mapDispatchToProps = dispatch => ({
     obtaineduser: user => dispatch(setCurrentUser(user))
