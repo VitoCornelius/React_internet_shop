@@ -12,6 +12,7 @@ import './App.css';
 import './pages/homepage/homepage.styles.scss'
 
 import HomePage from "./pages/homepage/homepage.component";
+import {logger} from "redux-logger/src";
 
 class App extends React.Component {
 
@@ -70,4 +71,4 @@ const mapDispatchToProps = dispatch => ({
     obtaineduser: user => dispatch(setCurrentUser(user))
 });
 
-export default connect(mapStateToProps , mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
