@@ -7,6 +7,11 @@ import {auth} from '../../firebase/firabase.config';
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
+//seetrors 
+import {createStructuredSelector} from 'reselect'; //wtf is this ? 
+import {selectCartHidden} from '../../redux/cart/cart.selectors';
+import {selectCurrentUser} from '../../redux/user/user.selector';
+
 import './header.styles.scss';
 
 const Header = ({userFromReducer, hidden}) => (
@@ -32,11 +37,11 @@ const Header = ({userFromReducer, hidden}) => (
     </div>
 );
 
-const mapStateToProps = /*(state) */ ({user : {userFromReducer}, cart : {hidden}})=> (
+// const mapStateToProps = /*(state) */ ({user : {userFromReducer}, cart : {hidden}})=> (
+const mapStateToProps = createStructuredSelector( //create structured selector -> do not need to use the state 
     {
-        //: state.user.userFromReducer //tutaj jest powolywany do zycie ten router
-        userFromReducer,
-        hidden
+        userFromReducer : selectCurrentUser,
+        hidden : selectCartHidden
     }
 );
 

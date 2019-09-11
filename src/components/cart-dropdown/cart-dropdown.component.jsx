@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import CustomButton from "../custom-button/cutom-button.component";
+import {selectCartItems} from '../../redux/cart/cart.selectors';
 
 import CartItem from "../cart-item/cart-item.component";
 
@@ -21,8 +22,12 @@ const CartDropdown = ({cartItems}) => (
     </div>
 );
 
-const mapStateToProps = ({cart: {cartItems}}) => (
-    {cartItems}
-);
+// const mapStateToProps = ({cart: {cartItems}}) => (
+//     {cartItems}
+// );
+
+const mapStateToProps = (state) => ({ //so this is memoized 
+    cartItems : selectCartItems(state)
+});
 
 export default connect(mapStateToProps)(CartDropdown);
