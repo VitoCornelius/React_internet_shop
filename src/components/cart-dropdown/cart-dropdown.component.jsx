@@ -6,9 +6,11 @@ import CustomButton from "../custom-button/cutom-button.component";
 import {selectCartItems} from '../../redux/cart/cart.selectors';
 import CartItem from "../cart-item/cart-item.component";
 
+import {toggleCartHidden} from "../../redux/cart/cart.action";
+
 import './cart-dropdown.styles.scss';
 
-const CartDropdown = ({cartItems, history}) => (
+const CartDropdown = ({cartItems, history, dispatch, ...otherProps}) => ( //we have access to the dispatch function
     <div className='cart-dropdown'>
         <div className='cart-items'>
             {
@@ -23,7 +25,11 @@ const CartDropdown = ({cartItems, history}) => (
             }
         </div>
 
-        <CustomButton onClick={() => history.push('/checkout')} >GO TO CHECKOUT</CustomButton>
+        <CustomButton onClick={() => {
+                dispatch(toggleCartHidden());
+                history.push('/checkout')
+                }
+            } >GO TO CHECKOUT</CustomButton>
     </div>
 );
 
@@ -36,3 +42,4 @@ const mapStateToProps = (state) => ({ //so this is memoized
 });
 
 export default withRouter(connect(mapStateToProps)(CartDropdown));  //the order matters 
+//if we do not add the mapDispatchToProps to connect, connect will by default add it to the properties 
