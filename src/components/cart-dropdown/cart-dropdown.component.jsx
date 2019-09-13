@@ -26,7 +26,7 @@ const CartDropdown = ({cartItems, history, dispatch, ...otherProps}) => ( //we h
         </div>
 
         <CustomButton onClick={() => {
-                dispatch(toggleCartHidden());
+                dispatch(toggleCartHidden()); //do not have to write the mapDispatchToProps
                 history.push('/checkout')
                 }
             } >GO TO CHECKOUT</CustomButton>
