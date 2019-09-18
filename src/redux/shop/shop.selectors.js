@@ -6,3 +6,17 @@ export const selectShopItems = createSelector(
     [selectShop],
     shop => shop.collections
 );
+
+export const selectCollectionsForPreview = createSelector(
+    [selectShopItems],
+    collections => Object.keys(collections).map(key => collections[key]) //gets us all the keys in an array format
+ )
+
+export const selectCollection = collectionUrlParam => createSelector( //this selector needs a collection param !!! so an argument 
+    [selectShopItems],
+    // collections => collections.find(
+    //     // collection => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
+    //       
+    // )
+    collections => collections[collectionUrlParam]//data normalization -> do not use the array
+);
