@@ -20,7 +20,7 @@ const CheckoutItem = ({ cartItem, clearItem, removeItem, addItem }) => { //passi
             <span className='price'>{price}</span>
             <div className='remove-button' onClick={() => clearItem(cartItem)}>
                 &#10005;
-            </div>
+            </div>            
         </div>
     )};
 
