@@ -5,7 +5,7 @@ import rootReducer from './root-reducer';
 
 const middlewares = [];
 
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === 'development') { //this is set by create react app ! 
     middlewares.push(logger);
 }
 

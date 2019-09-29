@@ -1,11 +1,21 @@
 import React from 'react';
 import {ReactComponent as ShoppingIcon} from './../../assets/cart.svg';
 
+
+import styled from 'styled-components'
+
 import {connect} from 'react-redux';
 import {toggleCartHidden} from "../../redux/cart/cart.action";
 import {selectCartItemCount} from './../../redux/cart/cart.selectors';
 
 import './cart-icon.styles.scss';
+
+
+//styped component 
+const Text = styled.div` 
+    color : red;
+    font-size : 28px;
+`;
 
 const CartIcon = ({toggleCartHidden, itemCount}) => (
     <div className='cart-icon' onClick={toggleCartHidden}>
