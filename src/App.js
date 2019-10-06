@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import Header from "./components/header/header.component";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 
-import {auth, createUserProfileDocument} from './firebase/firabase.config'
+import {auth, createUserProfileDocument, addCOllectionAndDocuments} from './firebase/firabase.config'
 
 import './App.css';
 import './pages/homepage/homepage.styles.scss'
@@ -18,6 +18,7 @@ import {setCurrentUser} from "./redux/user/user.actions";
 import {selectCurrentUser} from './redux/user/user.selector';
 
 import {createStructuredSelector} from 'reselect'; 
+import {selectCollectionsForPreview} from './redux/shop/shop.selectors';
 
 class App extends React.Component {
 
@@ -26,7 +27,7 @@ class App extends React.Component {
     //communication between the firebase app and the uset
     componentDidMount() {
 
-        const {obtaineduser} = this.props;
+        const {obtaineduser, collectionsArray} = this.props;
         console.log(this.props);
 
         this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
@@ -42,6 +43,10 @@ class App extends React.Component {
             } else {
                 obtaineduser(userAuth);
             }
+            // addCOllectionAndDocuments('collection',  //add all the data to firestore 
+            //     collectionsArray.map(({title, items}) => ({title, items})) //WTF ??? destructure and crete a new object 
+
+            // )
         })
     }
 
@@ -71,7 +76,8 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector( {
-    currentUser : selectCurrentUser
+    currentUser : selectCurrentUser,
+    collectionsArray : selectCollectionsForPreview
 });
 // const mapStateToProps = ({user}) => ({ //destrucuturuize the state
 //     currentUser: user.userFromReducer //access to this.props.currentuser

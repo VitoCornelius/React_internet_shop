@@ -5,6 +5,7 @@ import ColectionItem from "./../../components/collection-item/collection-item.co
 
 import {selectCollection} from '../../redux/shop/shop.selectors';
 
+
 const CollectionPage = ({collection, match}) => { //we have access to match 
     //we have access to match.params.collectionId
     console.log(collection);

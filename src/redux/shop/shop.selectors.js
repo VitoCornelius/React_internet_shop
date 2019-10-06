@@ -9,7 +9,7 @@ export const selectShopItems = createSelector(
 
 export const selectCollectionsForPreview = createSelector(
     [selectShopItems],
-    collections => Object.keys(collections).map(key => collections[key]) //gets us all the keys in an array format
+    collections => collections ? Object.keys(collections).map(key => collections[key]) : [] //gets us all the keys in an array format
  )
 
 export const selectCollection = collectionUrlParam => createSelector( //this selector needs a collection param !!! so an argument 
@@ -18,5 +18,5 @@ export const selectCollection = collectionUrlParam => createSelector( //this sel
     //     // collection => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
     //       
     // )
-    collections => collections[collectionUrlParam]//data normalization -> do not use the array
+    collections => collections ? collections[collectionUrlParam] : null //data normalization -> do not use the array
 );
