@@ -1,7 +1,6 @@
 import SHOP_DATA from "./shop.data"
 
 import ShopActionTypes from './shop.types';
-import undefined from "firebase/empty-import";
 
 const INITIAL_STATE = {
     collections : null, //we do not have a initial data, we need to download the data from the backend 

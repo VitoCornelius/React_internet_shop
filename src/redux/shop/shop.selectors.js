@@ -20,3 +20,8 @@ export const selectCollection = collectionUrlParam => createSelector( //this sel
     // )
     collections => collections ? collections[collectionUrlParam] : null //data normalization -> do not use the array
 );
+
+export const selectIsCollectionFetching = createSelector(
+    [selectShop],
+    shop => shop.isFetching
+);

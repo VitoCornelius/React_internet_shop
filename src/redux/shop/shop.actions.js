@@ -7,7 +7,7 @@ export const fetchCollectionsStart = () => ({
 
 export const fetchCollectionsSuccess = collectionsMap => (
     {
-        type : ShopActionTypes.FETCH_COLLECTIONS_START,
+        type : ShopActionTypes.FETCH_COLLECTIONS_SUCCESS,
         payload : collectionsMap
     }
 );
@@ -17,7 +17,7 @@ export const fetchCollectionsFailure = errorMessage => ({
     payload : errorMessage
 });
 
-export const fetchCollectionsStartAsync = () => {
+export const fetchCollectionsStartAsync = () => { //reusable action async redux 
     return dispatch => {
         const collectionRef = firestore.collection('collection');
         dispatch(fetchCollectionsStart()); //inform that there is a download ongoing ! 
