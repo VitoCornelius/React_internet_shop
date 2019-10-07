@@ -45,7 +45,6 @@ class App extends React.Component {
             }
             // addCOllectionAndDocuments('collection',  //add all the data to firestore 
             //     collectionsArray.map(({title, items}) => ({title, items})) //WTF ??? destructure and crete a new object 
-
             // )
         })
     }

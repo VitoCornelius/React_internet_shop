@@ -24,11 +24,28 @@ class ShopPage extends React.Component {
   componentDidMount() { //download the colleciton data from firebase DB 
     const {updateCollections} = this.props;
     const collectionRef = firestore.collection('collection');
-    collectionRef.onSnapshot(async snapshot => {
-      const collectionsMap = convertCollectionSnapshotToMap(snapshot)
-      updateCollections(collectionsMap);
-      this.setState({loading : false});
-    })
+
+
+    // fetch('https://firestore.googleapis.com/v1/projects/crown-db-6492e/databases/(default)/documents/')
+    // .then(response => response.json())
+    // .then(collections => console.log(collections))
+    //the same with fetch ! we use the firebase REST API 
+
+    // collectionRef.onSnapshot(async snapshot => {
+    //   const collectionsMap = convertCollectionSnapshotToMap(snapshot)
+    //   updateCollections(collectionsMap);
+    //   this.setState({loading : false});
+    // })
+    //this is by using the observer pattern 
+
+    //the same can be achieved with collectionRef.get().then(XXX) but this is not an observable pattern, so the data will only be loaded once ! 
+    collectionRef.get().then(
+      snapshot => {
+        const collectionsMap = convertCollectionSnapshotToMap(snapshot)
+        updateCollections(collectionsMap);
+        this.setState({loading : false});
+      }
+    )
   }
 
   render() {

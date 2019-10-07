@@ -3,7 +3,9 @@ import logger from 'redux-logger';
 import {persistStore} from 'redux-persist'; //allows the browser to cache the store
 import rootReducer from './root-reducer';
 
-const middlewares = [];
+import thunk from 'redux-thunk';
+
+const middlewares = [thunk];
 
 if (process.env.NODE_ENV === 'development') { //this is set by create react app ! 
     middlewares.push(logger);
