@@ -17,7 +17,7 @@ export const fetchCollectionsFailure = errorMessage => ({
     payload : errorMessage
 });
 
-export const fetchCollectionsStartAsync = () => { //reusable action async redux 
+export const fetchCollectionsStartAsync = () => { //reusable action async redux thunk -> it only detects functions ! 
     return dispatch => {
         const collectionRef = firestore.collection('collection');
         dispatch(fetchCollectionsStart()); //inform that there is a download ongoing ! 
