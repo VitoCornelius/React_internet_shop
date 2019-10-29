@@ -5,7 +5,7 @@ import rootReducer from './root-reducer';
 
 import thunk from 'redux-thunk'; //we do not need this anymore
 
-import {fetchCollectionsStart} from './shop/shop.saga';
+import rootSaga from './root-saga';
 import createSagaMiddleware from 'redux-saga' //asyns actions with sagas
 const sagaMiddleware = createSagaMiddleware(); 
 
@@ -18,7 +18,8 @@ if (process.env.NODE_ENV === 'development') { //this is set by create react app 
 //apply the redux reducers with the middleware - logging 
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
-sagaMiddleware.run(fetchCollectionsStart);
+sagaMiddleware.run(rootSaga);
+//if we had multiple sagas, we would have to run them all , we can create a root saga  
 
 //apply persistence in the local or session storage
 export const persistor = persistStore(store);
